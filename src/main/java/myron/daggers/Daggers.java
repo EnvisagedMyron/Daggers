@@ -14,7 +14,7 @@ public class Daggers implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Daggers has loaded!");
-		//DaggerItemGroup.registerDaggerItemGroup();
+		DaggerItemGroup.registerDaggerItemGroup();
 
 		DaggerItems.registerModItems();
 	}

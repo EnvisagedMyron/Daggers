@@ -35,7 +35,7 @@ public class DaggerItems {
     // registry stuff
 
     private static Item registerDagger(String daggerName, Item item){
-        return Registry.register(Registries.ITEM,new Identifier(Daggers.MOD_ID),item);
+        return Registry.register(Registries.ITEM,new Identifier(Daggers.MOD_ID,daggerName),item);
     }
     public static void registerModItems(){
         Daggers.LOGGER.info("Registering Mod Items for" + Daggers.MOD_ID);

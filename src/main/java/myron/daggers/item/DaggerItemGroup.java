@@ -12,7 +12,7 @@ import net.minecraft.util.Identifier;
 
 public class DaggerItemGroup {
     public static final ItemGroup DAGGER_GROUP = Registry.register(Registries.ITEM_GROUP,
-            new Identifier(Daggers.MOD_ID,"daggers"),
+            new Identifier(Daggers.MOD_ID, "daggers"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.daggers"))
                     .icon(() -> new ItemStack(DaggerItems.NETHERITE_DAGGER)).entries((displayContext, entries) -> {
                         entries.add(DaggerItems.WOODEN_DAGGER);
@@ -23,7 +23,9 @@ public class DaggerItemGroup {
 
 
                     }).build());
-    //public static void registerDaggerItemGroup(){
-        //Daggers.LOGGER.info("Registering Item Groups for " + Daggers.MOD_ID);
+
+    public static void registerDaggerItemGroup() {
+        Daggers.LOGGER.info("Registering Item Groups for " + Daggers.MOD_ID);
     }
+}
 
