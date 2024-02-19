@@ -12,17 +12,17 @@ import net.minecraft.util.Identifier;
 
 public class DaggerItems {
      public static final Item WOODEN_DAGGER = registerDagger("wooden_dagger",
-             new SwordItem(ToolMaterials.WOOD,2,2,new FabricItemSettings()));
+             new SwordItem(ToolMaterials.WOOD,1,-2.1f,new FabricItemSettings().maxDamage(30)));
     public static final Item STONE_DAGGER = registerDagger("stone_dagger",
-            new SwordItem(ToolMaterials.STONE,3,2,new FabricItemSettings()));
+            new SwordItem(ToolMaterials.STONE,1,-2.1f,new FabricItemSettings().maxDamage(65)));
     public static final Item GOLD_DAGGER = registerDagger("gold_dagger",
-            new SwordItem(ToolMaterials.STONE,3,2,new FabricItemSettings()));
+            new SwordItem(ToolMaterials.GOLD,1,-2f,new FabricItemSettings().maxDamage(15)));
     public static final Item IRON_DAGGER = registerDagger("iron_dagger",
-            new SwordItem(ToolMaterials.IRON,4,2,new FabricItemSettings()));
+            new SwordItem(ToolMaterials.IRON,1,-2.1f,new FabricItemSettings().maxDamage(125)));
     public static final Item DIAMOND_DAGGER = registerDagger("diamond_dagger",
-            new SwordItem(ToolMaterials.DIAMOND,5,2,new FabricItemSettings()));
+            new SwordItem(ToolMaterials.DIAMOND,1,-2.1f,new FabricItemSettings().maxDamage(780)));
     public static final Item NETHERITE_DAGGER = registerDagger("netherite_dagger",
-            new SwordItem(ToolMaterials.WOOD,6,2,new FabricItemSettings()));
+            new SwordItem(ToolMaterials.NETHERITE,1,-2.1f,new FabricItemSettings().maxDamage(1015)));
 
 
 

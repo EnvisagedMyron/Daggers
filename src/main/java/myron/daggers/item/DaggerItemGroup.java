@@ -13,11 +13,12 @@ import net.minecraft.util.Identifier;
 public class DaggerItemGroup {
     public static final ItemGroup DAGGER_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Daggers.MOD_ID, "daggers"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.daggers"))
+            FabricItemGroup.builder().displayName(Text.translatable("Daggers"))
                     .icon(() -> new ItemStack(DaggerItems.NETHERITE_DAGGER)).entries((displayContext, entries) -> {
                         entries.add(DaggerItems.WOODEN_DAGGER);
                         entries.add(DaggerItems.STONE_DAGGER);
                         entries.add(DaggerItems.IRON_DAGGER);
+                        entries.add(DaggerItems.GOLD_DAGGER);
                         entries.add(DaggerItems.DIAMOND_DAGGER);
                         entries.add(DaggerItems.NETHERITE_DAGGER);
 
