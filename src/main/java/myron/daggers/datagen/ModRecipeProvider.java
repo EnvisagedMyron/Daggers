@@ -1,5 +1,6 @@
 package myron.daggers.datagen;
 
+import com.mojang.datafixers.types.templates.Tag;
 import myron.daggers.item.DaggerItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -7,6 +8,8 @@ import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
+import net.minecraft.registry.tag.ItemTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -22,7 +25,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern(" W ")
                 .pattern(" S ")
                 .input('S',Items.STICK)
-                .input('W',Items.OAK_PLANKS)
+                .input('W', ItemTags.PLANKS)
                 .criterion(hasItem(Items.STICK),conditionsFromItem(Items.OAK_PLANKS))
                 .criterion(hasItem(Items.OAK_PLANKS),conditionsFromItem(Items.STICK))
                 .offerTo(exporter,new Identifier(getRecipeName(DaggerItems.WOODEN_DAGGER)));
